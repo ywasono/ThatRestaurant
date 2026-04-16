@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-sans: 'Inter', sans-serif;
+    --color-charcoal: #0A0A0A;
+    --color-crimson: #8B0000;
+    --color-gold: #D4AF37;
+    
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+}
+
+:root {
+    --background: #0A0A0A;
+    --foreground: #F5F5F5;
+    --card: #121212;
+    --card-foreground: #F5F5F5;
+    --popover: #121212;
+    --popover-foreground: #F5F5F5;
+    --primary: #D4AF37;
+    --primary-foreground: #0A0A0A;
+    --secondary: #8B0000;
+    --secondary-foreground: #F5F5F5;
+    --muted: #1A1A1A;
+    --muted-foreground: #A0A0A0;
+    --accent: #8B0000;
+    --accent-foreground: #F5F5F5;
+    --destructive: #FF4444;
+    --border: #2A2A2A;
+    --input: #2A2A2A;
+    --ring: #D4AF37;
+    --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground antialiased;
+    }
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
